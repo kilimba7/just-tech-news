@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     Post.findAll({
         //query config 
         attributes: ['id', 'post_url', 'title', 'created_at'],
-        order: [['created_at', 'DESC']]
+        order: [['created_at', 'DESC']],
         include: [
             {
                 model: User,
